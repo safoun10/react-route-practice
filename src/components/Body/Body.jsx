@@ -2,8 +2,8 @@ import React from 'react';
 
 const Body = () => {
     return (
-        <div>
-            Body
+        <div className='root'>
+            <div className='display-1 text-center'>Body</div>
         </div>
     );
 };
