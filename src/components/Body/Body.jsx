@@ -5,7 +5,7 @@ const Body = () => {
     return (
         <div className='root'>
             <div className='display-1 text-center'>Body</div>
-            <DashBoard></DashBoard>
+            {/* <DashBoard></DashBoard> */}
         </div>
     );
 };
