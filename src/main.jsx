@@ -16,43 +16,47 @@ import PostDetails from "./components/postDetails/PostDetails";
 
 const router = createBrowserRouter([
   {
-    path : '/',
-    element : <App></App>,
-    children : [
+    path: "/",
+    element: <App></App>,
+    children: [
       {
-        path : '/about-us',
+        path: "/about-us",
         element: <AboutUs></AboutUs>,
-        loader : () => fetch("https://jsonplaceholder.typicode.com/users")
+        loader: () => fetch("https://jsonplaceholder.typicode.com/users"),
       },
       {
-        path : 'person/:personID',
+        path: "person/:personID",
         element: <PersonDetail></PersonDetail>,
-        loader: ({params}) => fetch(`https://jsonplaceholder.typicode.com/users/${params.personID}`)
+        loader: ({ params }) =>
+          fetch(
+            `https://jsonplaceholder.typicode.com/users/${params.personID}`
+          ),
       },
       {
-        path : 'posts',
+        path: "posts",
         element: <Posts></Posts>,
-        loader: () => fetch("https://jsonplaceholder.typicode.com/posts")
+        loader: () => fetch("https://jsonplaceholder.typicode.com/posts"),
       },
       {
-        path : 'posts/:postID',
+        path: "posts/:postID",
         element: <PostDetails></PostDetails>,
-        loader: ({params}) => fetch(`https://jsonplaceholder.typicode.com/posts/${params.postID}`)
+        loader: ({ params }) =>
+          fetch(`https://jsonplaceholder.typicode.com/posts/${params.postID}`),
       },
       {
-        path : '/products',
-        element: <Products></Products>
+        path: "/products",
+        element: <Products></Products>,
       },
       {
-        path : '/services',
-        element: <Services></Services>
+        path: "/services",
+        element: <Services></Services>,
       },
       {
-        path : '/contact-us',
-        element: <ContactUs></ContactUs>
-      }
-    ]
-  }
+        path: "/contact-us",
+        element: <ContactUs></ContactUs>,
+      },
+    ],
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
