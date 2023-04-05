@@ -31,6 +31,11 @@ const Header = () => {
           id: 5,
           name: "Contact Us",
           path: "/contact-us"
+        },
+        {
+          id: 6,
+          name: "Posts",
+          path: "/posts"
         }
       ];
 
