@@ -3,7 +3,6 @@ import { useLoaderData } from 'react-router-dom';
 
 const PostDetails = () => {
     const postDetails = useLoaderData();
-    console.log(postDetails);
     const {body , id} = postDetails;
     return (
         <div className='mx-5 my-5'>
