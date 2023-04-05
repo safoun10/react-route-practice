@@ -10,6 +10,7 @@ import AboutUs from "./components/about-us/AboutUs";
 import Products from "./components/products/Products";
 import Services from "./components/services/Services";
 import ContactUs from "./components/contact-us/ContactUs";
+import PersonDetail from "./components/personDetail/PersonDetail";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
         path : '/about-us',
         element: <AboutUs></AboutUs>,
         loader : () => fetch("https://jsonplaceholder.typicode.com/users")
+      },
+      {
+        path : 'person/:personID',
+        element: <PersonDetail></PersonDetail>,
+        loader: ({params}) => fetch(`https://jsonplaceholder.typicode.com/users/${params.personID}`)
       },
       {
         path : '/products',
@@ -39,7 +45,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* <App /> */}
     <RouterProvider router={router}></RouterProvider>
   </React.StrictMode>
 );
