@@ -1,13 +1,15 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom'
+import "./Post.css";
 
 const Post = (props) => {
-    const { body , title } = props.post
+    const { id , body , title } = props.post
     return (
-        <div className='p-4'>
-            <div className='fw-bold'>{title}</div>
-            <div>{body}</div>
+        <div className='post mx-auto'>
+            <div className='fw-bold text-center'>{title}</div>
+            <button className='button w-100'><NavLink to={`/post/${id}`} className="link"> see more ...</NavLink></button>
         </div>
     );
 };
 
-export default Post;
+export default Post; 

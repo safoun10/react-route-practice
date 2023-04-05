@@ -1,0 +1,14 @@
+.post{
+    padding: 35px 80px;
+    width: 50vw;
+}
+.button{
+    background-color: transparent;
+    border: 2px solid #576F72;
+    border-radius: 16px;
+    margin-top: 10px;
+}
+.link{
+    text-decoration: none;
+    color: #576F72;
+}
